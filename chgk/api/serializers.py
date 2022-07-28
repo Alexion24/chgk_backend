@@ -11,11 +11,15 @@ def process_packages_data() -> list:
     return right_structure_packages
 
 
-def process_package_data(package_id):
+def process_package_data(package_id, tour_number=''):
     url = f'http://www.db.chgk.info/packages/{package_id}'
     tours = requests.get(url).json()['tours']
     right_tours_structure = []
     for tour in tours:
         tour = {'tourNumber': tour['number'], 'questions': tour['questions']}
         right_tours_structure.append(tour)
+    if tour_number:
+        for tour in right_tours_structure:
+            if tour['tourNumber'] == int(tour_number):
+                return tour
     return right_tours_structure
