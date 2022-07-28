@@ -25,7 +25,7 @@ runserver:
 
 gunicorn:
 		export DJANGO_SETTINGS_MODULE=chgk.settings
-		poetry run gunicorn task_manager.wsgi
+		poetry run gunicorn chgk.wsgi
 
 requirements:
 		poetry export --without-hashes -f requirements.txt -o requirements.txt
