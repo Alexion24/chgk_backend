@@ -46,7 +46,14 @@ INSTALLED_APPS = [
     'corsheaders',
     'chgk.api',
     'rest_framework',
+    'bootstrap4',
 ]
+
+MIDDLEWARE_CLASSES = (
+    # Simplified static file serving.
+    # https://warehouse.python.org/project/whitenoise/
+    'whitenoise.middleware.WhiteNoiseMiddleware',
+)
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
