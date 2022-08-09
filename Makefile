@@ -8,9 +8,6 @@ lint:
 test:
 		poetry run python3 manage.py test chgk/tests
 
-version:
-		poetry run django-admin version
-
 startproject:
 		poetry run django-admin startproject chgk .
 
@@ -23,12 +20,6 @@ gunicorn:
 
 requirements:
 		poetry export --without-hashes -f requirements.txt -o requirements.txt
-
-locale:
-		python3 manage.py makemessages -l ru
-
-compile:
-		poetry run django-admin compilemessages --ignore=env
 
 makemigrations:
 		 poetry run python manage.py makemigrations

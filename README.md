@@ -1,2 +1,2 @@
 # chgk_backend
-Backend for ChGK game
+Backend for ChGK game site
