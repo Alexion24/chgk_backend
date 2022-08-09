@@ -15,18 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from rest_framework import routers
-from api.views import PackagesListView, PackageView, get_test_json
 from .views import IndexView
-
-router = routers.DefaultRouter()
-router.register('packages/', PackagesListView.as_view(),)
-router.register('packages/<id>', PackageView.as_view(),)
-router.register('', get_test_json,)
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/', include(router.urls)),
+    path('api/', include('chgk.api.urls')),
     path('', IndexView.as_view()),
 ]
