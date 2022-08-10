@@ -8,7 +8,7 @@ from chgk.api.serializers import process_packages_data, process_package_data
 def get_test_json(request):
     package = process_package_data('10L_FM_u', 1)
     return HttpResponse(
-        json.dumps(package, ensure_ascii=False),
+        json.dumps(package, ensure_ascii=False, indent=4),
         content_type="application/json"
     )
 
@@ -18,12 +18,12 @@ def get_package_by_id(request, **kwargs):
         package_id, tour_number = kwargs['id'].split('.')
         package = process_package_data(package_id, tour_number)
         return HttpResponse(
-            json.dumps(package, ensure_ascii=False),
+            json.dumps(package, ensure_ascii=False, indent=4),
             content_type="application/json"
         )
     package = process_package_data(kwargs['id'])
     return HttpResponse(
-        json.dumps(package, ensure_ascii=False),
+        json.dumps(package, ensure_ascii=False, indent=4),
         content_type="application/json"
     )
 
@@ -31,7 +31,7 @@ def get_package_by_id(request, **kwargs):
 def get_all_packages(request):
     packages = process_packages_data()
     return HttpResponse(
-        json.dumps(packages, ensure_ascii=False),
+        json.dumps(packages, ensure_ascii=False, indent=4),
         content_type="application/json"
     )
 
