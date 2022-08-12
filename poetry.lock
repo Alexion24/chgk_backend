@@ -107,14 +107,6 @@ python-versions = ">=3.7"
 Django = ">=3.2"
 
 [[package]]
-name = "django-cors-middleware"
-version = "1.5.0"
-description = "django-cors-middleware is a Django application for handling the server headers required for Cross-Origin Resource Sharing (CORS). Fork of django-cors-headers."
-category = "main"
-optional = false
-python-versions = "*"
-
-[[package]]
 name = "djangorestframework"
 version = "3.13.1"
 description = "Web APIs for Django, made easy."
@@ -289,7 +281,7 @@ brotli = ["brotli"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "6089c551dc94f071cc755dfe0570bad6df35ae965480a8e13c5fb3bfcd4c69e2"
+content-hash = "0a29dba77c9d57c1c02db9c4fe7020b7ec3cf98833f6a12dcd1000469bb63cdb"
 
 [metadata.files]
 asgiref = [
@@ -324,7 +316,6 @@ dj-database-url = []
 django = []
 django-bootstrap4 = []
 django-cors-headers = []
-django-cors-middleware = []
 djangorestframework = []
 flake8 = [
     {file = "flake8-4.0.1-py2.py3-none-any.whl", hash = "sha256:479b1304f72536a55948cb40a32dce8bb0ffe3501e26eaf292c7e60eb5e0428d"},
