@@ -20,6 +20,7 @@ dj-database-url = "^1.0.0"
 whitenoise = "^6.2.0"
 psycopg2-binary = "^2.9.3"
 django-bootstrap4 = "^22.2"
+djoser = "^2.1.0"
 
 [tool.poetry.dev-dependencies]
 flake8 = "^4.0.1"
