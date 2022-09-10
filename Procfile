@@ -1,1 +1,1 @@
-web: gunicorn chgk.wsgi --log-file -
+web: python manage.py migrate && gunicorn chgk.wsgi --log-file -

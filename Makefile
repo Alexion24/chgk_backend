@@ -30,5 +30,5 @@ migrate:
 herokumigrate:
 		heroku run python manage.py migrate
 
-#collectstatic:
-#		poetry run python manage.py collectstatic --noinput
+collectstatic:
+		poetry run python manage.py collectstatic --noinput
